@@ -3,7 +3,7 @@ BASE        ?= ubuntu-base
 PYTORCH_REF ?= master
 
 DOCKER_BUILD = docker build -t compat-test:$@ --build-arg BASE_IMAGE=$(BASE_IMAGE) --build-arg BASE=$(BASE) --build-arg PYTORCH_REF=$(PYTORCH_REF) .
-DOCKER_RUN   = docker run --rm -it -w /pytorch/test compat-test:$@
+DOCKER_RUN   = docker run --rm -i -w /pytorch/test compat-test:$@
 
 .PHONY: ubuntu-16.04
 ubuntu-16.04: BASE_IMAGE := ubuntu:16.04
