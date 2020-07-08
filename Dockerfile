@@ -36,7 +36,7 @@ RUN conda install -c pytorch-test \
         ninja \
         numpy \
         pillow \
-        pytorch \
+        pytorch=1.5.1 \
         pyyaml \
         six
 COPY entrypoint.sh /entrypoint.sh
